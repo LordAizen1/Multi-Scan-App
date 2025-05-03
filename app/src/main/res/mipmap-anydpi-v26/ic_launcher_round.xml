@@ -1,6 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@drawable/ic_launcher_background" />
-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
-    <monochrome android:drawable="@drawable/ic_launcher_foreground" />
-</adaptive-icon>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Background circle -->
+    <path
+        android:fillColor="#0277BD"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0" />
+    
+    <!-- Top-left quadrant (blue) -->
+    <path
+        android:fillColor="#039BE5"
+        android:pathData="M54,54m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0
+                           M54,54 L54,9 A45,45 0,0 0,9 54 L54,54 Z" />
+    
+    <!-- Top-right quadrant (green) -->
+    <path
+        android:fillColor="#43A047"
+        android:pathData="M54,54 L54,9 A45,45 0,0 1,99 54 L54,54 Z" />
+    
+    <!-- Bottom-left quadrant (light blue) -->
+    <path
+        android:fillColor="#29B6F6"
+        android:pathData="M54,54 L9,54 A45,45 0,0 0,54 99 L54,54 Z" />
+    
+    <!-- Bottom-right quadrant (light green) -->
+    <path
+        android:fillColor="#8BC34A"
+        android:pathData="M54,54 L99,54 A45,45 0,0 1,54 99 L54,54 Z" />
+    
+    <!-- Document icon in top-left -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M30,24 h16 v4 h-16 z
+                           M30,30 h16 v3 h-16 z
+                           M30,35 h16 v3 h-16 z
+                           M24,18 v24 h24 v-24 h-24 z
+                           M26,20 h20 v20 h-20 z" />
+    
+    <!-- ID card icon in top-right -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M72,18 v24 h-24 v-24 h24 z
+                           M70,20 h-20 v20 h20 z
+                           M66,25 a4,4 0,1 1,-8 0 a4,4 0,0 1,8 0 z
+                           M62,31 a6,3 0,0 0,-6 3 h12 a6,3 0,0 0,-6 -3 z
+                           M70,36 h-16 v3 h16 z" />
+    
+    <!-- Photo icon in bottom-left -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,66 h24 v-24 h-24 z
+                           M26,44 h20 v20 h-20 z
+                           M30,56 l5,-5 l3,3 l5,-5 l5,7 h-18 z" />
+    
+    <!-- Code icon in bottom-right -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,66 h24 v-24 h-24 z
+                           M62,44 h20 v20 h-20 z
+                           M65,48 h14 v2 h-14 z
+                           M65,52 h14 v2 h-14 z
+                           M65,56 h14 v2 h-14 z
+                           M65,60 h8 v2 h-8 z" />
+    
+    <!-- SCANNER text -->
+    <path
+        android:fillColor="#0277BD"
+        android:pathData="M22,81 h64 v16 h-64 z" />
+    
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M26,92 q-1,-1 -1,-2.5 q0,-1.5 1,-2.5 q1,-1 2.5,-1 q1.5,0 2.5,1 l-1,1 q-0.5,-0.5 -1.5,-0.5 q-1,0 -1.5,0.5 q-0.5,0.5 -0.5,1.5 q0,1 0.5,1.5 q0.5,0.5 1.5,0.5 q1,0 1.5,-0.5 l1,1 q-1,1 -2.5,1 q-1.5,0 -2.5,-1 z
+                           M33,92 q-1,-1 -1,-2.5 q0,-1.5 1,-2.5 q1,-1 2.5,-1 q1.5,0 2.5,1 q1,1 1,2.5 q0,1.5 -1,2.5 q-1,1 -2.5,1 q-1.5,0 -2.5,-1 z M35.5,91.5 q0.5,0.5 1.5,0.5 q1,0 1.5,-0.5 q0.5,-0.5 0.5,-1.5 q0,-1 -0.5,-1.5 q-0.5,-0.5 -1.5,-0.5 q-1,0 -1.5,0.5 q-0.5,0.5 -0.5,1.5 q0,1 0.5,1.5 z
+                           M41,93 v-7 h3 q1.5,0 2.5,1 q1,1 1,2.5 q0,1.5 -1,2.5 q-1,1 -2.5,1 h-3 z M44,91.5 q0.5,0.5 1.5,0.5 h1 v-5 h-1 q-1,0 -1.5,0.5 q-0.5,0.5 -0.5,1.5 v1 q0,1 0.5,1.5 z
+                           M49,93 v-7 h5 v1.5 h-3 v1.5 h3 v1.5 h-3 v1 h3 v1.5 h-5 z
+                           M56,93 v-7 h5 v1.5 h-3 v1.5 h3 v1.5 h-3 v2.5 h-2 z
+                           M63,93 v-7 h2 v7 h-2 z" />
+</vector> 

@@ -36,7 +36,7 @@ class TFLiteLandmarkClassifierOfNorthAmerica(
 
             classifier = ImageClassifier.createFromFileAndOptions(
                context,
-                "north_america.tflite",
+                "northamerica.tflite",
                 options
             )
 

@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LandmarkRecognition"
+rootProject.name = "Multi-Scan"
 include(":app")
  
