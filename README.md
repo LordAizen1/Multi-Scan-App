@@ -1,6 +1,6 @@
 # MultiScan App
 
-MultiScan is an Android application that combines document scanning and landmark recognition capabilities.
+MultiScan is an Android application that combines document scanning and landmark recognition capabilities. Built with Jetpack Compose for a modern UI and TensorFlow Lite for landmark recognition, this project showcases advanced Android development skills.
 
 ## Features
 
@@ -55,13 +55,20 @@ This project uses Gradle to build. Open the project in Android Studio and run as
 ## Some Images to Show the App Working/UI
 
 ### Home Screen
-![MultiScan Home Screen](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/home-screen.jpg)
+![MultiScan Home Screen](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/home-screen.jpg)
+*The welcome screen with options for Document Scanner and Landmark Recognition.*
 
 ### Landmark Recognition Options
-![Landmark Recognition Options](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-options.jpg)
+![Landmark Recognition Options](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/landmark-options.jpg)
+*Selecting a region (e.g., Asian Landmarks) for recognition.*
 
 ### Landmark Recognition Result (India Gate)
-![India Gate Recognition](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-result.jpg)
+![India Gate Recognition](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/landmark-result.jpg)
+*Recognizing India Gate with 89% confidence using TensorFlow Lite.*
 
 ### Document Scanner
-![Document Scanner](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/document-scanner.jpg)
+![Document Scanner](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/document-scanner.jpg)
+*Document scanner showing saved PDFs (e.g., baka.pdf, sussy.pdf).*
+
+## Portfolio
+Explore more of my projects, including MultiScan, on my portfolio: [Nivedita Tailors Portfolio](https://LordAizen1.github.io/nivedita-tailors)
