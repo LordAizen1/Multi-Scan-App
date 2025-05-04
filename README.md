@@ -55,13 +55,13 @@ This project uses Gradle to build. Open the project in Android Studio and run as
 ## Some Images to Show the App Working/UI
 
 ### Home Screen
-![MultiScan Home Screen](https://raw.githubusercontent.com/<username>/MultiScan/main/home-screen.jpeg)
+![MultiScan Home Screen](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/home-screen.jpeg)
 
 ### Landmark Recognition Options
-![Landmark Recognition Options](https://raw.githubusercontent.com/<username>/MultiScan/main/landmark-options.jpeg)
+![Landmark Recognition Options](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-options.jpeg)
 
 ### Landmark Recognition Result (India Gate)
-![India Gate Recognition](https://raw.githubusercontent.com/<username>/MultiScan/main/landmark-result.jpeg)
+![India Gate Recognition](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-result.jpeg)
 
 ### Document Scanner
-![Document Scanner](https://raw.githubusercontent.com/<username>/MultiScan/main/document-scanner.jpeg)
+![Document Scanner](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/document-scanner.jpeg)
