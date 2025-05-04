@@ -70,5 +70,3 @@ This project uses Gradle to build. Open the project in Android Studio and run as
 ![Document Scanner](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/document-scanner.jpg)
 *Document scanner showing saved PDFs (e.g., baka.pdf, sussy.pdf).*
 
-## Portfolio
-Explore more of my projects, including MultiScan, on my portfolio: [Nivedita Tailors Portfolio](https://LordAizen1.github.io/nivedita-tailors)
