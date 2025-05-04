@@ -55,13 +55,17 @@ This project uses Gradle to build. Open the project in Android Studio and run as
 ## Some Images to Show the App Working/UI
 
 ### Home Screen
-![MultiScan Home Screen](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/home-screen.jpeg)
+![MultiScan Home Screen](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/home-screen.jpeg)
+*The welcome screen with options for Document Scanner and Landmark Recognition.*
 
 ### Landmark Recognition Options
-![Landmark Recognition Options](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-options.jpeg)
+![Landmark Recognition Options](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/landmark-options.jpeg)
+*Selecting a region (e.g., Asian Landmarks) for recognition.*
 
 ### Landmark Recognition Result (India Gate)
-![India Gate Recognition](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/landmark-result.jpeg)
+![India Gate Recognition](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/landmark-result.jpeg)
+*Recognizing India Gate with 89% confidence using TensorFlow Lite.*
 
 ### Document Scanner
-![Document Scanner](https://raw.githubusercontent.com/LordAizen1/MultiScan/main/document-scanner.jpeg)
+![Document Scanner](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/document-scanner.jpeg)
+*Document scanner showing saved PDFs (e.g., baka.pdf, sussy.pdf).*
