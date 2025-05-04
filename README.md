@@ -50,4 +50,18 @@ This project has been set up with the basic integration structure, but you need 
 
 ## Building and Running
 
-This project uses Gradle to build. Open the project in Android Studio and run as a regular Android application. 
+This project uses Gradle to build. Open the project in Android Studio and run as a regular Android application.
+
+## Some Images to Show the App Working/UI
+
+### Home Screen
+![MultiScan Home Screen](https://raw.githubusercontent.com/<username>/MultiScan/main/screenshots/home-screen.jpg)
+
+### Landmark Recognition Options
+![Landmark Recognition Options](https://raw.githubusercontent.com/<username>/MultiScan/main/screenshots/landmark-options.jpg)
+
+### Landmark Recognition Result (India Gate)
+![India Gate Recognition](https://raw.githubusercontent.com/<username>/MultiScan/main/screenshots/landmark-result.jpg)
+
+### Document Scanner
+![Document Scanner](https://raw.githubusercontent.com/<username>/MultiScan/main/screenshots/document-scanner.jpg)
