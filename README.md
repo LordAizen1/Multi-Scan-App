@@ -59,7 +59,7 @@ This project uses Gradle to build. Open the project in Android Studio and run as
 *The welcome screen with options for Document Scanner and Landmark Recognition.*
 
 ### Multiple App Languages
-![MultiScan App Languages] (https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/languages.jpg)
+![MultiScan App Languages](https://raw.githubusercontent.com/LordAizen1/Multi-Scan-App/main/languages.jpg)
 * The home screen also has the option to change the app language, which supports up to 4 languages. 
 
 ### Landmark Recognition Options
