@@ -9,27 +9,36 @@ import androidx.activity.result.IntentSenderRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -44,10 +53,12 @@ import androidx.core.content.FileProvider
 import com.example.multi_scan.R
 import com.example.multi_scan.data.models.PdfEntity
 import com.example.multi_scan.ui.screens.common.ErrorScreen
+import com.example.multi_scan.ui.screens.common.LanguageSelectionDialog
 import com.example.multi_scan.ui.screens.common.LoadingDialog
 import com.example.multi_scan.ui.screens.common.RenameDeleteDialog
 import com.example.multi_scan.ui.screens.home.components.PdfLayout
 import com.example.multi_scan.ui.viewmodels.PdfViewModel
+import com.example.multi_scan.utils.LanguageUtils
 import com.example.multi_scan.utils.copyPdffileToAppDirectory
 import com.example.multi_scan.utils.getFileSize
 import com.example.multi_scan.utils.showToast
@@ -68,11 +79,44 @@ fun HomeScreen(
     onNavigateToDocScanner: () -> Unit,
     onNavigateToLandmarkRecognition: () -> Unit
 ) {
+    val context = LocalContext.current
+    var showLanguageDialog by remember { mutableStateOf(false) }
+    
+    if (showLanguageDialog) {
+        LanguageSelectionDialog(
+            onDismiss = { showLanguageDialog = false },
+            onLanguageSelected = { languageCode ->
+                // Save selected language
+                LanguageUtils.setLanguage(context, languageCode)
+                
+                // Update app locale
+                LanguageUtils.updateLocale(context, languageCode)
+                
+                // Restart activity to apply changes
+                val intent = (context as Activity).intent
+                context.finish()
+                context.startActivity(intent)
+                
+                showLanguageDialog = false
+            }
+        )
+    }
+    
     Scaffold(
         topBar = {
             TopAppBar(
                 title = {
                     Text(text = stringResource(id = R.string.app_name))
+                },
+                actions = {
+                    // Language selection button
+                    IconButton(onClick = { showLanguageDialog = true }) {
+                        Icon(
+                            imageVector = Icons.Default.Language,
+                            contentDescription = stringResource(id = R.string.change_language),
+                            tint = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
                 }
             )
         }
@@ -87,7 +131,7 @@ fun HomeScreen(
             Spacer(modifier = Modifier.height(64.dp))
             
             Text(
-                text = "Welcome to MultiScan",
+                text = stringResource(id = R.string.welcome_message),
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center
@@ -96,7 +140,7 @@ fun HomeScreen(
             Spacer(modifier = Modifier.height(16.dp))
             
             Text(
-                text = "Choose an option below",
+                text = stringResource(id = R.string.choose_option),
                 fontSize = 16.sp,
                 textAlign = TextAlign.Center,
                 color = Color.Gray
@@ -114,7 +158,7 @@ fun HomeScreen(
                 )
             ) {
                 Text(
-                    text = "Document Scanner",
+                    text = stringResource(id = R.string.document_scanner),
                     fontSize = 18.sp
                 )
             }
@@ -131,7 +175,7 @@ fun HomeScreen(
                 )
             ) {
                 Text(
-                    text = "Landmark Recognition",
+                    text = stringResource(id = R.string.landmark_recognition),
                     fontSize = 18.sp
                 )
             }
@@ -190,7 +234,7 @@ fun DocScannerScreen(pdfViewModel: PdfViewModel) {
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = "Document Scanner")
+                    Text(text = stringResource(id = R.string.document_scanner))
                 }
             )
         },
@@ -269,10 +313,10 @@ fun DocScannerScreen(pdfViewModel: PdfViewModel) {
                                             }
                                             context.startActivity(intent)
                                         } catch (e: Exception) {
-                                            context.showToast("Cannot open PDF: ${e.message}")
+                                            context.showToast(context.getString(R.string.cannot_open_pdf, e.message))
                                         }
                                     } else {
-                                        context.showToast("PDF file not found")
+                                        context.showToast(context.getString(R.string.pdf_not_found))
                                     }
                                 }
                             )

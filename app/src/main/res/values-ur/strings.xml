@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ملٹی-سکین</string>
+    <string name="europ_name">یورپی لینڈمارک شناخت</string>
+    <string name="africa_name">افریقی لینڈمارک شناخت</string>
+    <string name="asia_name">ایشیائی لینڈمارک شناخت</string>
+    <string name="anterctica_name">اوشینیا انٹارکٹیکا لینڈمارک شناخت</string>
+    <string name="south_america_name">جنوبی امریکی لینڈمارک شناخت</string>
+    <string name="north_america_name">شمالی امریکی لینڈمارک شناخت</string>
+    <string name="scan">دستاویز اسکین کریں</string>
+    <string name="no_pdf_found">کوئی پی ڈی ایف دستاویز نہیں ملی</string>
+    <string name="welcome_message">ملٹی-سکین میں خوش آمدید</string>
+    <string name="choose_option">نیچے ایک آپشن منتخب کریں</string>
+    <string name="document_scanner">دستاویز اسکینر</string>
+    <string name="landmark_recognition">لینڈمارک شناخت</string>
+    <string name="language">زبان</string>
+    <string name="change_language">زبان تبدیل کریں</string>
+    <string name="cancel">منسوخ کریں</string>
+    <string name="cannot_open_pdf">پی ڈی ایف نہیں کھول سکتے: %1$s</string>
+    <string name="pdf_not_found">پی ڈی ایف فائل نہیں ملی</string>
+    <string name="choose_region">لینڈمارک کی شناخت کے لیے ایک علاقہ منتخب کریں:</string>
+    <string name="camera_permission_required">کیمرا اجازت درکار ہے</string>
+    <string name="camera_permission_message">اس فیچر کو لینڈمارک کی شناخت کے لیے کیمرا تک رسائی کی ضرورت ہے۔</string>
+    <string name="camera_permission_toast">لینڈمارک شناخت کے لیے کیمرا اجازت درکار ہے</string>
+    <string name="rename_pdf">پی ڈی ایف کا نام تبدیل کریں</string>
+    <string name="delete_pdf">پی ڈی ایف حذف کریں</string>
+    <string name="enter_new_name">پی ڈی ایف کے لیے نیا نام درج کریں:</string>
+    <string name="file_extension_note">فائل کا اختتام .pdf ایکسٹینشن کے ساتھ ہونا چاہیے</string>
+    <string name="confirm_delete_pdf">کیا آپ واقعی اس پی ڈی ایف کو حذف کرنا چاہتے ہیں؟</string>
+    <string name="rename">نام تبدیل کریں</string>
+    <string name="delete">حذف کریں</string>
+    <string name="processing">پروسیسنگ</string>
+    <string name="please_wait">براہ کرم پروسیسنگ کے دوران انتظار کریں...</string>
+    <string name="landmark_detected">شناخت شدہ لینڈمارک: %1$s</string>
+    <string name="confidence_percentage">اعتماد: %1$d%%</string>
+</resources> 

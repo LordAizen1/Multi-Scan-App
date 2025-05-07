@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">मल्टी-स्कैन</string>
+    <string name="europ_name">यूरोपीय लैंडमार्क पहचान</string>
+    <string name="africa_name">अफ्रीकी लैंडमार्क पहचान</string>
+    <string name="asia_name">एशियाई लैंडमार्क पहचान</string>
+    <string name="anterctica_name">ओशिनिया अंटार्कटिका लैंडमार्क पहचान</string>
+    <string name="south_america_name">दक्षिण अमेरिकी लैंडमार्क पहचान</string>
+    <string name="north_america_name">उत्तर अमेरिकी लैंडमार्क पहचान</string>
+    <string name="scan">दस्तावेज़ स्कैन करें</string>
+    <string name="no_pdf_found">कोई पीडीएफ दस्तावेज़ नहीं मिला</string>
+    <string name="welcome_message">मल्टी-स्कैन में आपका स्वागत है</string>
+    <string name="choose_option">नीचे एक विकल्प चुनें</string>
+    <string name="document_scanner">दस्तावेज़ स्कैनर</string>
+    <string name="landmark_recognition">लैंडमार्क पहचान</string>
+    <string name="language">भाषा</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="cannot_open_pdf">पीडीएफ नहीं खोल सकते: %1$s</string>
+    <string name="pdf_not_found">पीडीएफ फ़ाइल नहीं मिली</string>
+    <string name="choose_region">लैंडमार्क पहचानने के लिए एक क्षेत्र चुनें:</string>
+    <string name="camera_permission_required">कैमरा अनुमति आवश्यक है</string>
+    <string name="camera_permission_message">इस सुविधा को लैंडमार्क पहचानने के लिए कैमरा एक्सेस की आवश्यकता है।</string>
+    <string name="camera_permission_toast">लैंडमार्क पहचान के लिए कैमरा अनुमति आवश्यक है</string>
+    <string name="rename_pdf">पीडीएफ का नाम बदलें</string>
+    <string name="delete_pdf">पीडीएफ हटाएं</string>
+    <string name="enter_new_name">पीडीएफ के लिए नया नाम दर्ज करें:</string>
+    <string name="file_extension_note">फ़ाइल का अंत .pdf एक्सटेंशन से होना चाहिए</string>
+    <string name="confirm_delete_pdf">क्या आप वाकई इस पीडीएफ को हटाना चाहते हैं?</string>
+    <string name="rename">नाम बदलें</string>
+    <string name="delete">हटाएं</string>
+    <string name="processing">प्रोसेसिंग</string>
+    <string name="please_wait">प्रोसेसिंग के दौरान कृपया प्रतीक्षा करें...</string>
+    <string name="landmark_detected">पहचाना गया लैंडमार्क: %1$s</string>
+    <string name="confidence_percentage">विश्वास स्तर: %1$d%%</string>
+</resources> 

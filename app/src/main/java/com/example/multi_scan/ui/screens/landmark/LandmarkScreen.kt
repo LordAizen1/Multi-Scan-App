@@ -104,7 +104,7 @@ fun LandmarkScreen() {
         if (!hasCameraPermission) {
             Toast.makeText(
                 context,
-                "Camera permission is required for landmark recognition",
+                context.getString(R.string.camera_permission_toast),
                 Toast.LENGTH_LONG
             ).show()
         }
@@ -115,7 +115,7 @@ fun LandmarkScreen() {
             TopAppBar(
                 title = {
                     Text(
-                        text = "Landmark Recognition",
+                        text = stringResource(id = R.string.landmark_recognition),
                         fontWeight = FontWeight.Bold,
                         color = Color.White
                     )
@@ -199,7 +199,7 @@ fun ModelScreenWrapper(hasCameraPermission: Boolean, content: @Composable () -> 
                     verticalArrangement = Arrangement.Center
                 ) {
                     Text(
-                        text = "Camera Permission Required",
+                        text = stringResource(id = R.string.camera_permission_required),
                         fontWeight = FontWeight.Bold,
                         fontSize = 20.sp,
                         color = MaterialTheme.colorScheme.onErrorContainer
@@ -208,7 +208,7 @@ fun ModelScreenWrapper(hasCameraPermission: Boolean, content: @Composable () -> 
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     Text(
-                        text = "This feature requires camera access to recognize landmarks.",
+                        text = stringResource(id = R.string.camera_permission_message),
                         textAlign = TextAlign.Center,
                         fontSize = 16.sp,
                         color = MaterialTheme.colorScheme.onErrorContainer
@@ -242,7 +242,7 @@ fun RegionSelectionScreen(navController: NavController) {
                 )
             ) {
                 Text(
-                    text = "Choose a region to recognize landmarks from:",
+                    text = stringResource(id = R.string.choose_region),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center,

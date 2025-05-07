@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">মাল্টি-স্ক্যান</string>
+    <string name="europ_name">ইউরোপীয় স্থাপত্য স্বীকৃতি</string>
+    <string name="africa_name">আফ্রিকান স্থাপত্য স্বীকৃতি</string>
+    <string name="asia_name">এশিয়ান স্থাপত্য স্বীকৃতি</string>
+    <string name="anterctica_name">ওশেনিয়া অ্যান্টার্কটিকা স্থাপত্য স্বীকৃতি</string>
+    <string name="south_america_name">দক্ষিণ আমেরিকান স্থাপত্য স্বীকৃতি</string>
+    <string name="north_america_name">উত্তর আমেরিকান স্থাপত্য স্বীকৃতি</string>
+    <string name="scan">ডকুমেন্ট স্ক্যান করুন</string>
+    <string name="no_pdf_found">কোন পিডিএফ ডকুমেন্ট পাওয়া যায়নি</string>
+    <string name="welcome_message">মাল্টি-স্ক্যান-এ স্বাগতম</string>
+    <string name="choose_option">নিচে একটি অপশন বেছে নিন</string>
+    <string name="document_scanner">ডকুমেন্ট স্ক্যানার</string>
+    <string name="landmark_recognition">স্থাপত্য শনাক্তকরণ</string>
+    <string name="language">ভাষা</string>
+    <string name="change_language">ভাষা পরিবর্তন করুন</string>
+    <string name="cancel">বাতিল</string>
+    <string name="cannot_open_pdf">পিডিএফ খুলতে পারা যায়নি: %1$s</string>
+    <string name="pdf_not_found">পিডিএফ ফাইল পাওয়া যায়নি</string>
+    <string name="choose_region">স্থাপত্য শনাক্ত করার জন্য একটি অঞ্চল বেছে নিন:</string>
+    <string name="camera_permission_required">ক্যামেরা অনুমতি প্রয়োজন</string>
+    <string name="camera_permission_message">এই বৈশিষ্ট্যটির স্থাপত্য শনাক্ত করতে ক্যামেরা অ্যাক্সেস প্রয়োজন।</string>
+    <string name="camera_permission_toast">স্থাপত্য শনাক্তকরণের জন্য ক্যামেরা অনুমতি প্রয়োজন</string>
+    <string name="rename_pdf">পিডিএফ পুনঃনামকরণ</string>
+    <string name="delete_pdf">পিডিএফ মুছুন</string>
+    <string name="enter_new_name">পিডিএফ-এর জন্য নতুন নাম লিখুন:</string>
+    <string name="file_extension_note">ফাইলটি অবশ্যই .pdf এক্সটেনশন দিয়ে শেষ হতে হবে</string>
+    <string name="confirm_delete_pdf">আপনি কি নিশ্চিত যে আপনি এই পিডিএফটি মুছতে চান?</string>
+    <string name="rename">পুনঃনামকরণ</string>
+    <string name="delete">মুছুন</string>
+    <string name="processing">প্রক্রিয়াকরণ</string>
+    <string name="please_wait">প্রক্রিয়াকরণ চলাকালীন অনুগ্রহ করে অপেক্ষা করুন...</string>
+    <string name="landmark_detected">শনাক্তকৃত স্থাপত্য: %1$s</string>
+    <string name="confidence_percentage">নির্ভরযোগ্যতা: %1$d%%</string>
+</resources> 

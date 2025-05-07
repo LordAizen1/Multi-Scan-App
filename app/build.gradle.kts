@@ -19,14 +19,42 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        
+        // Enable app bundle
+        setProperty("archivesBaseName", "multi-scan-v$versionName($versionCode)")
     }
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+    
+    // Configure split APKs based on ABI
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("armeabi-v7a", "arm64-v8a", "x86", "x86_64")
+            isUniversalApk = false
+        }
+    }
+    
+    // Bundle configuration for Play Store
+    bundle {
+        language {
+            enableSplit = true
+        }
+        density {
+            enableSplit = true
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+    
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -52,6 +80,10 @@ android {
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
+            // Exclude license files to reduce app size
+            excludes += "META-INF/LICENSE*"
+            excludes += "META-INF/NOTICE*"
+            excludes += "META-INF/*.kotlin_module"
         }
     }
 }
@@ -84,10 +116,10 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-compose:2.6.0")
 
-    // TensorFlow Lite for Landmark Recognition
+    // TensorFlow Lite for Landmark Recognition - Use GPU delegate and metadata library for smaller size
     implementation("org.tensorflow:tensorflow-lite:2.12.0")
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.2")
-
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.2") // Replace support with metadata for smaller size
+    
     // Document scanner
     implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
 
@@ -108,10 +140,10 @@ dependencies {
     implementation("androidx.camera:camera-view:$cameraxVersion")
     implementation("androidx.camera:camera-extensions:$cameraxVersion")
 
-    // TensorFlow extended dependencies
+    // TensorFlow optimized dependencies - Use selective delegates to save space
     implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.0")
     implementation("org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.0")
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0")
+    // implementation("org.tensorflow:tensorflow-lite-gpu:2.9.0") - Remove duplicate GPU delegate
 
     // Extended Icons
     implementation("androidx.compose.material:material-icons-extended:1.5.0")

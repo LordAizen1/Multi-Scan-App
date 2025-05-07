@@ -22,9 +22,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.multi_scan.R
 import com.example.multi_scan.data.models.PdfEntity
 import com.example.multi_scan.ui.viewmodels.PdfViewModel
 import com.example.multi_scan.ui.viewmodels.setShowDialogState
@@ -52,7 +55,7 @@ fun LoadingDialog(pdfViewModel: PdfViewModel) {
     if (pdfViewModel.showDialog) {
         AlertDialog(
             onDismissRequest = { pdfViewModel.setShowDialogState(false) },
-            title = { Text(text = "Processing") },
+            title = { Text(text = stringResource(R.string.processing)) },
             text = {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
@@ -60,7 +63,7 @@ fun LoadingDialog(pdfViewModel: PdfViewModel) {
                 ) {
                     CircularProgressIndicator()
                     Spacer(modifier = Modifier.height(16.dp))
-                    Text(text = "Please wait while processing...")
+                    Text(text = stringResource(R.string.please_wait))
                 }
             },
             confirmButton = {}
@@ -78,13 +81,16 @@ fun RenameDeleteDialog(pdfViewModel: PdfViewModel) {
             onDismissRequest = { pdfViewModel.setShowRenameDeleteDialogState(false) },
             title = {
                 Text(
-                    text = if (pdfViewModel.pdfToRename != null) "Rename PDF" else "Delete PDF"
+                    text = if (pdfViewModel.pdfToRename != null) 
+                        stringResource(R.string.rename_pdf) 
+                    else 
+                        stringResource(R.string.delete_pdf)
                 )
             },
             text = {
                 if (pdfViewModel.pdfToRename != null) {
                     Column {
-                        Text(text = "Enter new name for PDF:")
+                        Text(text = stringResource(R.string.enter_new_name))
                         Spacer(modifier = Modifier.height(8.dp))
                         OutlinedTextField(
                             value = newName,
@@ -101,13 +107,13 @@ fun RenameDeleteDialog(pdfViewModel: PdfViewModel) {
                                         color = MaterialTheme.colorScheme.error
                                     )
                                 } else {
-                                    Text("File must end with .pdf extension")
+                                    Text(stringResource(R.string.file_extension_note))
                                 }
                             }
                         )
                     }
                 } else {
-                    Text(text = "Are you sure you want to delete this PDF?")
+                    Text(text = stringResource(R.string.confirm_delete_pdf))
                 }
             },
             confirmButton = {
@@ -123,14 +129,17 @@ fun RenameDeleteDialog(pdfViewModel: PdfViewModel) {
                     },
                     enabled = pdfViewModel.pdfToDelete != null || pdfViewModel.pdfNameValidation.isValid
                 ) {
-                    Text(text = if (pdfViewModel.pdfToRename != null) "Rename" else "Delete")
+                    Text(text = if (pdfViewModel.pdfToRename != null) 
+                        stringResource(R.string.rename) 
+                    else 
+                        stringResource(R.string.delete))
                 }
             },
             dismissButton = {
                 TextButton(
                     onClick = { pdfViewModel.setShowRenameDeleteDialogState(false) }
                 ) {
-                    Text(text = "Cancel")
+                    Text(text = stringResource(R.string.cancel))
                 }
             }
         )

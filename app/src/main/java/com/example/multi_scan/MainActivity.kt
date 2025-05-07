@@ -1,6 +1,7 @@
 package com.example.multi_scan
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
@@ -20,6 +21,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.multi_scan.navigation.AppNavHost
 import com.example.multi_scan.ui.theme.MultiScanTheme
 import com.example.multi_scan.ui.viewmodels.PdfViewModel
+import com.example.multi_scan.utils.LanguageUtils
 
 class MainActivity : ComponentActivity() {
     private val pdfViewModel by viewModels<PdfViewModel>{
@@ -46,10 +48,21 @@ class MainActivity : ComponentActivity() {
         }
     }
     
+    override fun attachBaseContext(newBase: Context) {
+        // Apply saved language before activity creation
+        val languageCode = LanguageUtils.getLanguage(newBase)
+        val context = LanguageUtils.updateLocale(newBase, languageCode)
+        super.attachBaseContext(context)
+    }
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        
+        // Apply saved language
+        val languageCode = LanguageUtils.getLanguage(this)
+        LanguageUtils.updateLocale(this, languageCode)
         
         // Request camera permission
         requestCameraPermission()

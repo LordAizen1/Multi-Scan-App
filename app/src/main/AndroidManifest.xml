@@ -17,12 +17,14 @@
         android:roundIcon="@drawable/scanner_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.MultiScan"
+        android:localeConfig="@xml/locales_config"
         tools:targetApi="31">
         <activity
             android:name="com.example.multi_scan.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MultiScan">
+            android:theme="@style/Theme.MultiScan"
+            android:configChanges="locale|layoutDirection">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
